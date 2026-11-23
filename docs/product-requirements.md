@@ -9,25 +9,25 @@
 
 ## MVP
 
-The owner approved Windows XP as the default OS and a functional desktop with a taskbar, Start menu, desktop icons, draggable windows, My Computer, My Network Places and five portfolio servers. The servers represent the five portfolio areas and use simulated or static content. Kali Linux and Mac OS X are deferred to later phases. Visitors can reach five portfolio areas, a simulated topology with a list view, a competition case study, the résumé and contact from desktop or mobile. Canonical reading routes remain available throughout. The System control identifies XP as active and shows Kali and Tiger as coming later. When implemented in later phases, it switches OS without losing access to résumé or contact.
+The owner approved Windows XP Luna as the default desktop on November 23, 2026. Use a clean, nostalgic Luna aesthetic and open directly to the desktop. Show Welcome on the first visit. The desktop includes a taskbar, Start menu, draggable windows and shortcuts for My Computer, My Network Places, My Documents, Resume and Recycle Bin. Keep the OS selector accessible from the taskbar. The servers represent the five portfolio areas and use simulated or static content. Kali Linux and Mac OS X are deferred to later phases. Visitors can reach five portfolio areas, a simulated topology with a list view, a competition case study, the résumé and contact from desktop or mobile. Canonical reading routes remain available throughout. The System control identifies XP as active and shows Kali and Tiger as coming later. When implemented in later phases, it switches OS without losing access to résumé or contact.
 
-Draft baseline for owner review is 320 CSS pixels, launcher and full-width panels on narrow screens, and a mobile System control. Use original artwork or independently reviewed licensed assets. Defer exact visual era approval for Kali and Tiger, which are represented here as contemporary XFCE and Tiger 10.4 proposals.
+Use a simplified mobile-friendly layout. The proposed implementation uses a launcher and full-width panels at narrow widths, with a 320 CSS pixel test baseline and taskbar access to the OS selector. Use original or appropriately licensed assets and record provenance before adding them. Defer exact visual era approval for Kali and Tiger, which are represented here as contemporary XFCE and Tiger 10.4 proposals.
 
-## Draft screens
+## Wireframes
 
 ```text
-XP DESKTOP
+XP LUNA DESKTOP · FIRST VISIT
 +----------------------------------------------------------------+
-| My Computer   +-- Welcome / About ------------------- [_][□][×]|
-| My Documents  | Portfolio areas, Résumé and Contact            ||
-| Network       | Open reading page                              ||
-| Résumé        +------------------------------------------------+|
-|                                                                |
+| My Computer   +-- Welcome --------------------------- [_][□][×]|
+| My Network    | Portfolio areas, Resume and Contact            ||
+| Places        | Open reading page                              ||
+| My Documents  +------------------------------------------------+|
+| Resume · Recycle Bin                                           |
 | +-- Start menu when open --+                                   |
 | | About | Projects | Network|                                  |
 | | Résumé | Contact | System  |                                  |
 | +---------------------------+                                  |
-| [Start] [Welcome / About]                      [System] [Clock]|
+| [Start] [Welcome]                      [OS selector] [Clock]|
 +----------------------------------------------------------------+
 
 KALI PROPOSAL
@@ -49,7 +49,7 @@ TIGER PROPOSAL
 +----------------------------------------------------------------+
 ```
 
-The XP draft opens Welcome by default on desktop. The mobile home presents launcher buttons and reading links. Approval of this specific wireframe, including its default open window, is pending.
+The XP wireframe reflects the approved first-visit Welcome window and taskbar OS selector. Exact spacing, colors and asset selections are implementation details. On narrow screens the proposed launcher keeps reading links reachable alongside the simplified panels.
 
 ## Interaction matrix
 
@@ -71,4 +71,4 @@ Render reading navigation in the initial HTML. A desktop enhancement can initial
 
 Exercise top actions with mouse, touch and keyboard at desktop and 320 CSS pixels and check at 200% zoom. Every navigation item has a destination or a clearly labeled unavailable state. Verify every published external link and each canonical route. Open résumé, contact, case studies and topology list without drag or terminal. Verify disabled JavaScript and reduced motion preserve reading actions. Use only approved publication material and check the provenance inventory before release.
 
-Deferred for MVP are alternate OS shells, terminal, games, audio, login, uploads, contact forms, tracking, third-party widgets, live network status and transitions between OS modes. Owner approval remains pending for final apps, résumé authority, contact, public identity and content.
+Deferred for MVP are alternate OS shells, terminal, games, audio, login, uploads, contact forms, tracking, third-party widgets, live network status and transitions between OS modes. Owner approval remains pending for the authoritative résumé, contact, public identity and content.

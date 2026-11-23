@@ -34,13 +34,13 @@
 - [ ] **Kali meaning:** Confirm preferred visual generation (e.g., XFCE contemporary Kali versus historical Kali). Screenshot reference is not a source of freely licensed UI assets.
 - [ ] **Mobile baseline:** Decide minimal supported width, whether windows become full-screen mobile panels, and whether OS switching is available on mobile. Proposed: launcher/panels, not freeform dragging.
 - [ ] **Privacy/content approvals:** Confirm exact full name, graduation date, GPA inclusion/omission, approved photos, public contact information, and which experiences may be published. Don't copy private lab diagrams, teammate details or sensitive screens.
-- [ ] **App list:** Approve which OS-specific apps are genuinely needed; defer toys, audio, login screens, games, and third-party widgets until MVP works.
+- [x] **App list:** Approve which OS-specific apps are genuinely needed; defer toys, audio, login screens, games, and third-party widgets until MVP works.
 - [ ] **Resume strategy:** Identify authoritative PDF file, update workflow, and whether professional info is mirrored as crawlable HTML.
 - [ ] **Analytics/contact:** Confirm whether to use analytics (default none) and whether contact is a mailto link (preferred for MVP) or a form requiring anti-abuse controls.
 
 ## Definition of MVP
 
-Owner-approved shell scope (2026-11-23) is Windows XP by default, with taskbar, Start menu, desktop icons, draggable windows, My Computer, My Network Places and five portfolio servers. Kali Linux and Mac OS X are deferred to later phases. The specific XP wireframe still needs approval.
+Owner-approved shell scope and wireframe decisions (2026-11-23) specify Windows XP Luna by default, direct entry to the desktop, first-visit Welcome, a taskbar OS selector, Start menu, draggable windows and a simplified mobile layout. Desktop shortcuts are My Computer, My Network Places, My Documents, Resume and Recycle Bin. The MVP includes five simulated portfolio servers and uses original or appropriately licensed assets. Kali Linux and Mac OS X are deferred to later phases.
 
 A visitor can open the site, immediately recognize the Windows XP-inspired desktop, open the Start menu and windowed apps, browse the five portfolio areas, explore a clearly *simulated* topology, open a project case study, and access a current résumé and contact link on desktop and mobile. Nothing requires using the terminal; no real scanning, authentication, persistent uploads, or external service access is necessary.
 
@@ -96,6 +96,8 @@ A visitor can open the site, immediately recognize the Windows XP-inspired deskt
 ---
 
 ## Phase 1 — Windows XP desktop shell (functional before decorative)
+
+See the [proposed first implementation tasks](docs/phase-1-first-slice.md).
 
 ### 1A. Shared desktop model
 - [ ] Define `OperatingSystem = 'xp' | 'kali' | 'tiger'` and app IDs; validate IDs centrally.

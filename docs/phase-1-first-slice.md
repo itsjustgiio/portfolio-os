@@ -1,0 +1,9 @@
+# Proposed first Windows XP Luna implementation
+
+Start with a functional desktop slice. Implement these tasks in roadmap order once Phase 0 is ready to close.
+
+1. **Shared window model.** Define typed app IDs and a registry for Welcome and the five desktop shortcuts. Implement a reducer for opening, focusing, minimizing, restoring, maximizing, moving, resizing and closing windows. Test repeated open, bounded geometry, focus and stacking transitions.
+2. **Desktop surface.** Add a scoped Luna shell, shortcut grid, Start menu, taskbar buttons and OS selector. Enter the desktop directly and open Welcome on the first visit. Decide and test how to remember dismissal, including when browser storage is unavailable. Use original or license-reviewed assets with provenance.
+3. **Window interactions.** Integrate the evaluated pointer adapter for desktop drag and resize. Provide keyboard-accessible controls, focus restoration and a simplified launcher with readable full-width panels on narrow screens. Keep the taskbar selector reachable and label later OS modes as coming later.
+4. **First connected apps.** Use Welcome and My Computer to connect the desktop to the five portfolio areas. Add safe static destinations for My Network Places, My Documents, Resume and Recycle Bin. Use clearly labeled preview or empty states where final material awaits approval. Model the five servers as simulated portfolio entries. Keep approved reading content accessible through ordinary links.
+5. **Vertical-slice acceptance.** Test opening, focusing, minimizing, restoring and closing overlapping windows with mouse, keyboard and touch. Check desktop and narrow layouts, 200% zoom, reduced motion, first-visit behavior and static reading navigation with JavaScript disabled. Preserve direct access to keyboard focus and essential links.
