@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Window interaction prototype</title>
+    <style>
+      body {
+        margin: 0;
+        font: 16px system-ui;
+      }
+      main {
+        margin: 8px;
+      }
+      .stage {
+        position: relative;
+        width: min(680px, 100%);
+        height: 400px;
+        overflow: hidden;
+        background: #edf1f6;
+      }
+      .window {
+        display: flex !important;
+        flex-direction: column;
+        background: white;
+        border: 1px solid #34435a;
+      }
+      .title {
+        padding: 8px;
+        background: #34435a;
+        color: white;
+        touch-action: none;
+      }
+      .body {
+        overflow: auto;
+        flex: 1;
+        padding: 8px;
+      }
+      .long-content {
+        min-height: 260px;
+      }
+      [data-resize-handle] {
+        touch-action: none;
+      }
+    </style>
+    <script defer src="bundle.js"></script>
+  </head>
+  <body>
+    <main>
+      <h1>Window interaction prototype</h1>
+      <div id="fixture"></div>
+    </main>
+  </body>
+</html>

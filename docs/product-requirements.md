@@ -9,7 +9,7 @@
 
 ## MVP
 
-Start with an XP-inspired desktop and a Start menu. Visitors can reach five portfolio areas, a simulated topology with a list view, a competition case study, the résumé and contact from desktop or mobile. Canonical reading routes remain available throughout. The System control identifies XP as active and shows Kali and Tiger as coming later. When implemented in later phases, it switches OS without losing access to résumé or contact.
+The owner approved Windows XP as the default OS and a functional desktop with a taskbar, Start menu, desktop icons, draggable windows, My Computer, My Network Places and five portfolio servers. The servers represent the five portfolio areas and use simulated or static content. Kali Linux and Mac OS X are deferred to later phases. Visitors can reach five portfolio areas, a simulated topology with a list view, a competition case study, the résumé and contact from desktop or mobile. Canonical reading routes remain available throughout. The System control identifies XP as active and shows Kali and Tiger as coming later. When implemented in later phases, it switches OS without losing access to résumé or contact.
 
 Draft baseline for owner review is 320 CSS pixels, launcher and full-width panels on narrow screens, and a mobile System control. Use original artwork or independently reviewed licensed assets. Defer exact visual era approval for Kali and Tiger, which are represented here as contemporary XFCE and Tiger 10.4 proposals.
 
@@ -49,7 +49,7 @@ TIGER PROPOSAL
 +----------------------------------------------------------------+
 ```
 
-The XP draft opens Welcome by default on desktop. The mobile home presents launcher buttons and reading links. Wireframe and MVP boundary approvals are pending.
+The XP draft opens Welcome by default on desktop. The mobile home presents launcher buttons and reading links. Approval of this specific wireframe, including its default open window, is pending.
 
 ## Interaction matrix
 

@@ -2,7 +2,7 @@
 
 [itsjustgiio/portfolio-os](https://github.com/itsjustgiio/portfolio-os) is the public source repository. GitHub reported `main`, size 0 and no detected license. An anonymous `git ls-remote --symref origin` returned no refs, so there was no remote README, LICENSE or .gitignore to inspect. The workspace already had a Git checkout with that origin and an unborn `main`. Initial `git status --short` showed only the supplied, untracked TODO.md. No commit history established how the checkout was created.
 
-The workstation has Windows PowerShell 5.1, Git 2.47.0.windows.2, Node 22.16.0, npm 10.9.2 and Codex CLI 0.171.0-alpha.13. Git reports the Credential Manager helper. GitHub CLI was unavailable on PATH. Anonymous read access was verified. Authenticated permissions and credential scope still need owner verification. Avoid creating or exporting a token for anonymous reads.
+The workstation has Windows PowerShell 5.1, Git 2.47.0.windows.2, Node 22.16.0, npm 10.9.2 and Codex CLI 0.171.0-alpha.13. Git reports the Credential Manager helper. GitHub CLI was unavailable on PATH. Anonymous read access was verified. Authenticated permissions and credential scope still need owner verification. The [GitHub verification](github-verification.md) documents the active workflows, branch protection status and owner settings to review. Avoid creating or exporting a token for anonymous reads.
 
 The package is private and named `portfolio-os`. The working site title is Giovanni OS. The logo, production domain and existing website host need owner confirmation. No project copyright license has been selected. Keep upstream dependency notices with any applicable redistribution and verify rights per asset before adding it.
 

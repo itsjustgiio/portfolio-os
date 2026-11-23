@@ -40,6 +40,8 @@
 
 ## Definition of MVP
 
+Owner-approved shell scope (2026-11-23) is Windows XP by default, with taskbar, Start menu, desktop icons, draggable windows, My Computer, My Network Places and five portfolio servers. Kali Linux and Mac OS X are deferred to later phases. The specific XP wireframe still needs approval.
+
 A visitor can open the site, immediately recognize the Windows XP-inspired desktop, open the Start menu and windowed apps, browse the five portfolio areas, explore a clearly *simulated* topology, open a project case study, and access a current résumé and contact link on desktop and mobile. Nothing requires using the terminal; no real scanning, authentication, persistent uploads, or external service access is necessary.
 
 ---
@@ -68,7 +70,7 @@ A visitor can open the site, immediately recognize the Windows XP-inspired deskt
 ### 0C. Technical decisions (ADRs)
 - [x] Evaluate **Next.js App Router** vs **React + Vite** against SEO, hosting, public routes, complexity, and current repo scaffolding. No framework change without a written tradeoff.
 - [x] Decide whether each app gets a canonical `/about`, `/projects/...`, `/resume` shareable URL as well as an in-desktop window.
-- [ ] Evaluate **react-rnd** versus custom pointer/keyboard window management; test touch behavior, z-order and license.
+- [x] Evaluate **react-rnd** versus custom pointer/keyboard window management; test touch behavior, z-order and license.
 - [x] Evaluate **React Flow** for the topology; inspect keyboard support and whether a static SVG/list fallback is simpler.
 - [x] Evaluate **XP.css** only after checking compatibility, appearance, stylesheet scope, and license. Avoid accidentally applying XP styles to Kali/Mac.
 - [x] Decide app/window state approach: plain React context/reducer first vs Zustand if complexity warrants it.
@@ -83,7 +85,7 @@ A visitor can open the site, immediately recognize the Windows XP-inspired deskt
 - [x] Use one supported Node runtime version in `.nvmrc`/`.node-version`/engines after verifying tooling needs.
 - [x] Configure TypeScript strict mode, formatting, linting, import alias and consistent filenames.
 - [x] Pin versions through lockfile; use clean installs in CI.
-- [ ] Add GitHub CI workflow with type-check, lint, tests, and production build; verify it succeeds on a test PR.
+- [x] Add GitHub CI workflow with type-check, lint, tests, and production build; verify it succeeds on a test PR.
 - [ ] Enable Dependabot alerts and appropriate updates; verify functionality in repo settings.
 - [ ] Configure branch protection/rulesets **only if permitted by actual account/repo plan**, otherwise document manual review rules.
 - [x] Establish branch naming `feat/*`, `fix/*`, `docs/*`, and PR checklist with screenshots and test evidence.
