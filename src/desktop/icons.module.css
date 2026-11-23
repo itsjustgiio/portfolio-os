@@ -1,0 +1,313 @@
+.icon {
+  --size: 32px;
+  display: inline-block;
+  position: relative;
+  width: var(--size);
+  height: var(--size);
+  flex: 0 0 var(--size);
+  filter: drop-shadow(1px 2px 1.3px #16273865);
+}
+.small {
+  --size: 16px;
+  filter: drop-shadow(0 1px 0.5px #14284475);
+}
+.large {
+  --size: 48px;
+}
+.icon::before,
+.icon::after,
+.icon i,
+.icon b {
+  content: "";
+  position: absolute;
+  display: block;
+}
+.computer::before,
+.network::before {
+  inset: 9% 24% 29% 2%;
+  border: 1px solid #4d5967;
+  border-radius: 15%;
+  background: linear-gradient(135deg, #fffbea 14%, #efe4c7 43%, #8c99aa 89%);
+  box-shadow:
+    inset 1px 1px #fffef0,
+    inset -2px -2px #66788985;
+}
+.computer::after,
+.network::after {
+  inset: 16% 32% 38% 10%;
+  border: 1px solid #315979;
+  border-radius: 15%;
+  background: radial-gradient(
+    ellipse at 30% 15%,
+    #f1ffff,
+    #81def5 25%,
+    #3896c6 59%,
+    #205788 92%
+  );
+}
+.computer i,
+.network i {
+  inset: 70% 33% 14% 9%;
+  border: 1px solid #6b7075;
+  border-radius: 20%;
+  background: linear-gradient(#eeeada, #8e9eac);
+}
+.computer b {
+  inset: 39% 2% 9% 69%;
+  z-index: 1;
+  border: 1px solid #596773;
+  border-radius: 12%;
+  background:
+    radial-gradient(circle at 53% 74%, #81e563 8%, transparent 13%),
+    linear-gradient(#697684, #697684) center 27% / 49% 5% no-repeat,
+    linear-gradient(#8e959f, #8e959f) center 41% / 49% 4% no-repeat,
+    linear-gradient(100deg, #fef7df 5%, #d4cdb9 60%, #768594 87%);
+  box-shadow: inset 1px 1px #fffbe5;
+}
+.network b {
+  inset: 42% 1% 4% 47%;
+  z-index: 1;
+  border: 1px solid #22698b;
+  border-radius: 50%;
+  background:
+    repeating-linear-gradient(0deg, transparent 0 25%, #e0fbfd91 27% 34%),
+    radial-gradient(ellipse at 35% 22%, #d3f8ed, #4faea0 38%, #296dc3 70%);
+}
+.network b::after {
+  content: "";
+  position: absolute;
+  inset: 0 27%;
+  border: 1px solid #e0fbfd91;
+  border-radius: 50%;
+}
+.documents::before,
+.personal::before {
+  inset: 19% 8% 12% 4%;
+  border: 1px solid #a66a1d;
+  border-radius: 10%;
+  background: linear-gradient(140deg, #ffe79a 5%, #e7a445 64%, #aa621e);
+  box-shadow: inset 1px 1px #fff1bd;
+}
+.documents b,
+.personal b {
+  inset: 12% 54% 77% 7%;
+  border: 1px solid #9f681f;
+  border-bottom: 0;
+  border-radius: 45% 30% 0 0;
+  background: linear-gradient(#fff0ab, #dca047);
+}
+.documents::after,
+.personal::after {
+  inset: 43% 2% 9% 5%;
+  transform: skewX(-9deg);
+  border: 1px solid #a66a1d;
+  border-radius: 10%;
+  background: linear-gradient(
+    150deg,
+    #fff6bf 4%,
+    #ffd15a 32%,
+    #e7a332 71%,
+    #b56b21
+  );
+  box-shadow:
+    inset 1px 1px #fff5b4,
+    inset -1px -1px #b7732b80;
+}
+.personal i {
+  inset: 53% 24% 18% 48%;
+  z-index: 1;
+  border: 1px solid #6c8eae;
+  border-radius: 14%;
+  background:
+    radial-gradient(circle at 49% 28%, #2469a1 0 15%, transparent 18%),
+    radial-gradient(ellipse at 50% 66%, #2469a1 0 23%, transparent 25%), #e8f7ff;
+}
+.resume::before,
+.textFile::before {
+  inset: 3% 16% 4%;
+  border: 1px solid #748caa;
+  border-radius: 9%;
+  background: linear-gradient(135deg, white 58%, #c6d9ec);
+}
+.resume::after {
+  content: "PDF";
+  inset: 47% 6% 17%;
+  display: grid;
+  place-items: center;
+  border-radius: 15%;
+  background: linear-gradient(#e46355, #a72824);
+  color: white;
+  font:
+    bold calc(var(--size) * 0.29) Arial,
+    sans-serif;
+}
+.resume i {
+  inset: 5% 17% 62% 59%;
+  background: linear-gradient(45deg, #a9bbcf 50%, transparent 51%);
+}
+.recycle::before,
+.recycleFull::before {
+  inset: 20% 17% 5%;
+  border: 1px solid #66879b;
+  border-radius: 13% 13% 28% 28%;
+  background:
+    repeating-linear-gradient(90deg, transparent 0 19%, #83a9bd6b 21% 24%),
+    linear-gradient(100deg, #abc8da, #f0fcff 57%, #8eaebf);
+}
+.recycle::after,
+.recycleFull::after {
+  inset: 15% 16% 69%;
+  border: 1px solid #64889e;
+  border-radius: 50%;
+  background: linear-gradient(#edf9fd, #7d9caf);
+}
+.recycle i,
+.recycleFull i {
+  inset: 35% 20% 8%;
+  z-index: 1;
+  color: #296647;
+  text-align: center;
+  font:
+    bold calc(var(--size) * 0.49) Arial,
+    sans-serif;
+  line-height: 1;
+}
+.recycleFull b {
+  inset: 4% 31% 75% 29%;
+  z-index: 1;
+  transform: rotate(-15deg);
+  border: 1px solid #94aac4;
+  border-radius: 15%;
+  background: #f0f7fb;
+}
+.welcome::before {
+  inset: 6%;
+  border: 1px solid #3567a9;
+  border-radius: 22%;
+  background: radial-gradient(
+    ellipse at 24% 18%,
+    #d6eeff,
+    #4b98de 47%,
+    #2761a9
+  );
+}
+.welcome::after {
+  content: "i";
+  inset: 6%;
+  color: white;
+  text-shadow: 0 1px #285288;
+  font:
+    bold calc(var(--size) * 0.72) Georgia,
+    serif;
+  text-align: center;
+}
+.server::before {
+  inset: 5% 18% 4%;
+  border: 1px solid #4d647d;
+  border-radius: 11%;
+  background: linear-gradient(
+    105deg,
+    #e6f5ff 5%,
+    #acc6df 28%,
+    #7497bb 68%,
+    #3d6080 87%
+  );
+  box-shadow:
+    inset 1px 1px #effaff,
+    inset -2px -1px #426181;
+}
+.server::after {
+  inset: 18% 29% 39%;
+  border-radius: 12%;
+  background: repeating-linear-gradient(#35516e 0 14%, #c6d8e5 15% 31%);
+}
+.server i {
+  inset: 67% 33% 24% 55%;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 25%, #e3ffc0, #71c850 55%, #237847);
+}
+.shield::before {
+  inset: 9% 13% 5%;
+  clip-path: polygon(
+    50% 0,
+    100% 15%,
+    92% 64%,
+    74% 84%,
+    50% 100%,
+    24% 84%,
+    8% 64%,
+    0 15%
+  );
+  background: linear-gradient(
+    130deg,
+    #d5e3ee,
+    #5b809f 45%,
+    #c3d5e8 68%,
+    #446587
+  );
+}
+.shield::after {
+  inset: 17% 22% 15%;
+  clip-path: polygon(50% 0, 100% 16%, 90% 66%, 50% 100%, 10% 66%, 0 16%);
+  background: linear-gradient(120deg, #b4df8e, #4b973d 48%, #246e36);
+}
+.shield i {
+  z-index: 1;
+  inset: 24% 0 0;
+  text-align: center;
+  color: #fff;
+  font:
+    bold calc(var(--size) * 0.47) Arial,
+    sans-serif;
+}
+.application::before {
+  inset: 13% 4% 16%;
+  border: 1px solid #204b87;
+  border-radius: 9%;
+  background: linear-gradient(
+    #66b4f2,
+    #255ea5 24%,
+    #f6fcff 27%,
+    #a1cae9 85%,
+    #6b97bc
+  );
+  box-shadow: inset 1px 1px #c7e8ff;
+}
+.application::after {
+  inset: 46% 21% 28%;
+  background:
+    radial-gradient(circle at 17% 50%, #276ac1 0 14%, transparent 17%),
+    radial-gradient(circle at 53% 26%, #3f9c58 0 14%, transparent 17%),
+    radial-gradient(circle at 87% 73%, #276ac1 0 14%, transparent 17%),
+    linear-gradient(15deg, transparent 45%, #567ba7 46% 55%, transparent 56%);
+}
+.briefcase::before {
+  inset: 13% 34% 49%;
+  border: 2px solid #79563d;
+  border-radius: 25%;
+}
+.briefcase::after {
+  inset: 28% 3% 10%;
+  border: 1px solid #644123;
+  border-radius: 13%;
+  background: linear-gradient(
+    #e4ae70,
+    #b47740 47%,
+    #754526 49%,
+    #bc874c 56%,
+    #81512c
+  );
+}
+.briefcase i {
+  inset: 53% 43% 31%;
+  z-index: 1;
+  border: 1px solid #77511d;
+  border-radius: 15%;
+  background: linear-gradient(#fff1ba, #cf983c);
+  box-shadow: inset 1px 1px #fff6cf;
+}
+
+.textFile::after {
+  inset: 22% 29% 24%;
+  background: repeating-linear-gradient(#54747f 0 1px, transparent 1px 4px);
+}

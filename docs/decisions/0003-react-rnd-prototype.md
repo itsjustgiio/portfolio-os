@@ -11,7 +11,7 @@ Evaluated `react-rnd@10.5.3` (MIT) with React 19.3.1 and Playwright 1.65.1. The 
 
 The resize grip is a pointer-only target. The fixture provides no keyboard move/resize, announcements of geometry, or focus restoration after closing a window. Raising a window does not reorder Tab navigation. Phase 1 should preserve semantic reading order and implement explicit focus restoration, native focus indicators, and accessible move/resize or fit controls. Screen readers, real mobile devices, iOS Safari, multitouch, and viewport changes mid-gesture were outside this test.
 
-Use react-rnd as the provisional desktop pointer adapter in Phase 1. Keep bounds, stacking and focus policy owned by the shared reducer and UI. A custom pointer implementation would offer direct control over capture and keyboard integration, with more code and validation for drag, resize, bounds, and scroll interaction. The tests exercise react-rnd only. Keep the launcher and full-width panels as the proposed mobile design. Revisit the adapter if the full shell exposes focus, touch, or viewport issues. The portfolio app has no react-rnd dependency.
+Use react-rnd as the provisional desktop pointer adapter in Phase 1. Keep bounds, stacking and focus policy owned by the shared reducer and UI. A custom pointer implementation would offer direct control over capture and keyboard integration, with more code and validation for drag, resize, bounds, and scroll interaction. The tests exercise react-rnd only. Keep the launcher and full-width panels as the proposed mobile design. Revisit the adapter if the full shell exposes focus, touch, or viewport issues. Phase 1 pins the same react-rnd version in the portfolio app and checks its integration against the production static export.
 
 ## Reproduce
 

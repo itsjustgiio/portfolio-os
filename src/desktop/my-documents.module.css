@@ -1,0 +1,134 @@
+.body {
+  display: grid;
+  grid-template-columns: 145px minmax(0, 1fr);
+  min-height: 300px;
+  background: white;
+}
+.tasks {
+  padding: 8px;
+  border-right: 1px solid #a3b7dd;
+  background: linear-gradient(155deg, #789bdb, #547cc5);
+}
+.tasks section {
+  margin-bottom: 8px;
+  overflow: hidden;
+  border-radius: 5px 5px 0 0;
+  background: #e8efff;
+}
+.tasks h3 {
+  margin: 0;
+  padding: 5px 6px;
+  background: linear-gradient(90deg, #fff, #c8d8fa);
+  color: #193b73;
+  font-size: 11px;
+}
+.tasks p {
+  margin: 0;
+  padding: 7px 6px;
+}
+.tasks a,
+.tasks button {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  width: 100%;
+  min-height: 27px;
+  padding: 4px 5px;
+  border: 0;
+  color: #16478b;
+  background: transparent;
+  cursor: pointer;
+  text-align: left;
+  text-decoration: underline;
+  font-size: 11px;
+}
+.tasks a:hover,
+.tasks button:hover {
+  background: #d7e5ff;
+}
+.backIcon {
+  display: inline-grid;
+  width: 17px;
+  height: 17px;
+  place-items: center;
+  border: 1px solid #447733;
+  border-radius: 50%;
+  background: linear-gradient(#70b84f, #3e8134);
+  color: white;
+  font-weight: bold;
+}
+button:disabled .backIcon {
+  border-color: #888e89;
+  background: #929992;
+}
+.directory .entries {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+  gap: 4px;
+}
+.directory .entries button {
+  gap: 6px;
+  line-height: 1.15;
+  overflow-wrap: anywhere;
+}
+@container network (max-width: 360px) {
+  .body {
+    grid-template-columns: 1fr;
+  }
+  .tasks {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    padding: 6px;
+    border: 0;
+  }
+  .tasks section {
+    flex: 1 1 110px;
+    margin: 0;
+  }
+}
+
+.directory {
+  min-height: 200px;
+  background: white;
+  color: #172238;
+}
+.directory p {
+  margin: 8px 0 12px;
+}
+.directory li a {
+  display: inline-block;
+  padding: 4px 6px;
+}
+.entries button {
+  min-height: 44px;
+}
+.entries button[aria-pressed="true"] {
+  border-color: #819fc7;
+  background: #dceafd;
+}
+.notepad {
+  min-height: 100%;
+  background: white;
+  color: #1d1d1d;
+}
+.notepadBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 7px 12px;
+  padding: 6px 9px;
+  border-bottom: 1px solid #b8b6a9;
+  background: #ece9dd;
+}
+.notepad pre {
+  margin: 0;
+  padding: 9px;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  font:
+    14px/1.45 "Lucida Console",
+    Consolas,
+    monospace;
+}

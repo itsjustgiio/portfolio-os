@@ -1,0 +1,540 @@
+.desktop {
+  --shell-blue: #225cd4;
+  --shell-text: #173574;
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  flex-direction: column;
+  height: 100dvh;
+  overflow: hidden;
+  font-size: 13px;
+}
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+.stage {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+  background: #3687cd;
+}
+.wallpaper {
+  position: absolute;
+  inset: 0;
+  background: #3687cd url("/artwork/green-meadow.webp") center / cover no-repeat;
+  pointer-events: none;
+}
+.shortcuts {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  height: 100%;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  width: max-content;
+  padding: 13px 8px;
+}
+.profiles {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 13px 8px;
+}
+.profiles a {
+  cursor: pointer;
+  text-decoration: none;
+}
+.profileIcon {
+  display: grid;
+  place-items: center;
+  width: 43px;
+  height: 43px;
+  border: 1px solid #161b24;
+  border-radius: 7px;
+  background: linear-gradient(#636978, #222632 55%, #151821);
+  box-shadow:
+    inset 1px 1px #ffffff60,
+    1px 2px 3px #0d1c4a66;
+  color: white;
+  font:
+    bold 20px Arial,
+    sans-serif;
+}
+.profileIcon[data-profile="LinkedIn"] {
+  border-color: #144979;
+  background: linear-gradient(#50a2d8, #1d69ad 55%, #1c558c);
+  font-size: 25px;
+}
+.shortcut {
+  display: grid;
+  justify-items: center;
+  align-content: center;
+  gap: 5px;
+  width: 91px;
+  min-height: 77px;
+  padding: 4px;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  color: white;
+  background: transparent;
+  text-shadow:
+    0 1px 2px #09142e,
+    0 1px 3px #09142e;
+  cursor: default;
+  line-height: 1.2;
+}
+.shortcut:hover,
+.shortcut[aria-pressed="true"] {
+  border-color: #d0e8ff;
+  background: #2858a9ad;
+}
+.shortcut:focus-visible,
+.taskbar :focus-visible,
+.titlebar :focus-visible {
+  outline-color: #fff;
+}
+.taskbar {
+  position: relative;
+  z-index: 50;
+  display: flex;
+  align-items: stretch;
+  gap: 5px;
+  height: 39px;
+  flex: 0 0 39px;
+  color: white;
+  background: linear-gradient(#4389ef 0 8%, #2864df 19%, #2457c9 84%, #1545a4);
+  box-shadow: 0 -1px 2px #183c8655;
+}
+.taskbar button {
+  cursor: pointer;
+  color: white;
+}
+.start {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 0 18px 0 9px;
+  border: 0;
+  border-radius: 0 10px 10px 0;
+  background: linear-gradient(#60a844, #377d29 27%, #286123 83%, #509839);
+  box-shadow:
+    inset 0 1px 2px #a8d487,
+    inset -2px 0 2px #25591c;
+  font:
+    bold italic 20px Arial,
+    sans-serif;
+  text-shadow: 1px 1px 1px #183b16;
+}
+.start:hover,
+.start[aria-expanded="true"] {
+  filter: brightness(1.15);
+}
+.flag {
+  display: grid;
+  grid-template-columns: repeat(2, 8px);
+  grid-auto-rows: 7px;
+  gap: 1px;
+  transform: skew(-12deg) rotate(-9deg);
+}
+.flag i:nth-child(1) {
+  background: #ee7654;
+}
+.flag i:nth-child(2) {
+  background: #9ed05d;
+}
+.flag i:nth-child(3) {
+  background: #67b7ec;
+}
+.flag i:nth-child(4) {
+  background: #f7cc59;
+}
+.tasks {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  min-width: 0;
+  flex: 1;
+  overflow: auto;
+  padding: 3px 2px;
+  scrollbar-width: thin;
+}
+.tasks button {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  flex: 0 1 146px;
+  min-width: 29px;
+  height: 28px;
+  border: 1px solid #6da0ef;
+  border-radius: 3px;
+  background: #376ed1;
+}
+.tasks button[aria-pressed="true"] {
+  background: #194cae;
+  box-shadow: inset 1px 1px 2px #173b83;
+}
+.tasks span:last-child {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.tray {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 2px 9px;
+  background: linear-gradient(#32aeef, #127bc5 24%, #0a68af);
+  box-shadow: inset 1px 0 #8fd8f6;
+  white-space: nowrap;
+}
+.tray a {
+  color: white;
+  font-size: 12px;
+}
+.tray button {
+  padding: 3px 5px;
+  border: 1px solid #a7defa;
+  border-radius: 3px;
+  background: #1765a8;
+}
+.clock {
+  min-width: 42px;
+  text-align: right;
+  font-size: 12px;
+}
+
+.window {
+  border: 2px solid #1758cb;
+  border-top: 0;
+  border-radius: 7px 7px 2px 2px;
+  box-shadow: 2px 4px 10px #16395755;
+  background: #f5f3e8;
+}
+.windowInner {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  border-radius: inherit;
+}
+.titlebar {
+  display: flex;
+  min-height: 33px;
+  padding: 3px;
+  gap: 3px;
+  background: linear-gradient(#4388ed, #225ed2 25%, #164fbf);
+  color: #fff;
+}
+.window[data-active="false"] .titlebar {
+  background: #506ca0;
+}
+.caption {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  min-width: 0;
+  gap: 5px;
+  cursor: move;
+  touch-action: none;
+}
+.windowTitle {
+  overflow: hidden;
+  color: white;
+  background: transparent;
+  border: 0;
+  padding: 1px 3px;
+  text-shadow: 1px 1px #153a86;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: bold;
+}
+.controls {
+  display: flex;
+  gap: 3px;
+}
+.controls button {
+  display: grid;
+  place-content: center;
+  width: 25px;
+  min-height: 25px;
+  padding: 0;
+  border: 1px solid white;
+  border-radius: 4px;
+  color: white;
+  background: #245ec2;
+  box-shadow: inset 1px 1px 2px #a9d9ff;
+  font:
+    bold 17px Arial,
+    sans-serif;
+  cursor: pointer;
+}
+.controls button:hover {
+  background: #377ee6;
+}
+.controls .close {
+  background: #ac3527;
+  box-shadow: inset 1px 1px 2px #ffb990;
+}
+.controls .close:hover {
+  background: #c04030;
+}
+.windowBody {
+  flex: 1;
+  min-height: 0;
+  overflow: auto;
+  background: #f5f3e8;
+}
+.document {
+  color: #202638;
+  background: #faf9f2;
+  min-height: 100%;
+  padding: 20px 22px;
+}
+.document h2 {
+  margin: 0 0 12px;
+  font:
+    bold 23px Arial,
+    sans-serif;
+  color: var(--shell-text);
+}
+.document p {
+  max-width: 46ch;
+  line-height: 1.55;
+}
+.document nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 14px;
+  margin-top: 18px;
+}
+.classicButton {
+  padding: 6px 11px;
+  border: 1px solid #7a92b7;
+  border-radius: 4px;
+  background: linear-gradient(white, #e4e9f2);
+  color: #1a3975;
+  cursor: pointer;
+}
+.explorer {
+  display: grid;
+  grid-template-columns: 136px minmax(0, 1fr);
+  gap: 10px;
+  min-height: 100%;
+  background: #fff;
+}
+.explorer aside {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-start;
+  color: #193e78;
+  background: #dce7fa;
+  padding: 12px 9px;
+}
+.explorer aside button {
+  border: 0;
+  background: transparent;
+  color: #134ba1;
+  padding: 0;
+  text-align: left;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.files {
+  padding: 10px 8px;
+}
+.files h2 {
+  font-size: 14px;
+  margin: 2px 0 10px;
+}
+.files ul {
+  display: grid;
+  gap: 3px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.files button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 3px 5px;
+  width: 100%;
+  border: 1px solid transparent;
+  text-align: left;
+  background: #fff;
+  color: #12315f;
+  cursor: pointer;
+}
+.files button:hover,
+.startGrid button:hover,
+.startGrid a:hover {
+  background: #deebff;
+  border-color: #8fb1e6;
+}
+
+.startMenu,
+.osMenu {
+  position: absolute;
+  z-index: 60;
+  bottom: 39px;
+  max-height: calc(100% - 39px);
+  overflow: auto;
+  border: 2px solid #225ac0;
+  border-radius: 7px 7px 0 0;
+  background: #fff;
+  box-shadow: 2px -2px 8px #1d3e7544;
+}
+.startMenu {
+  left: 0;
+  width: min(380px, 100%);
+}
+.startHeader {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 11px;
+  background: linear-gradient(#3682e4, #1b55bf);
+  border-bottom: 2px solid #ecaa54;
+  color: white;
+  font-weight: bold;
+  font-size: 17px;
+}
+.startGrid {
+  display: grid;
+  grid-template-columns: 1fr 42%;
+  border-bottom: 5px solid #2866d4;
+}
+.startGrid > * {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 8px;
+}
+.startGrid nav {
+  background: #dce9fb;
+  border-left: 1px solid #adc7ec;
+}
+.startGrid button,
+.startGrid a {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 31px;
+  border: 1px solid transparent;
+  padding: 4px 6px;
+  background: transparent;
+  color: #102f64;
+  text-align: left;
+  cursor: pointer;
+}
+.osMenu {
+  right: 0;
+  padding: 5px;
+}
+.osMenu button {
+  display: block;
+  width: 100%;
+  min-height: 33px;
+  text-align: left;
+  background: #fff;
+  border: 1px solid #d9e5f7;
+  color: #15386e;
+  padding: 4px 8px;
+}
+.osMenu button:disabled {
+  background: #f1f2f4;
+  color: #49536a;
+}
+.osMenu button[aria-current="true"] {
+  font-weight: bold;
+}
+
+@media (max-width: 640px) {
+  .shortcuts {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(82px, 1fr));
+    padding: 8px;
+    gap: 3px;
+  }
+  .profiles {
+    position: relative;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding: 0 8px 8px;
+  }
+  .profiles a {
+    width: 82px;
+  }
+  .shortcut {
+    width: 100%;
+  }
+  .caption {
+    cursor: default;
+  }
+  .controls button {
+    min-height: 37px;
+    width: 41px;
+  }
+  .titlebar {
+    min-height: 43px;
+  }
+  .window {
+    border-radius: 0;
+  }
+  .document {
+    padding: 17px;
+  }
+  .explorer {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    gap: 0;
+  }
+  .explorer aside {
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 7px 9px;
+  }
+  .taskbar {
+    height: 45px;
+    flex-basis: 45px;
+    gap: 2px;
+  }
+  .start {
+    padding: 0 9px 0 6px;
+    font-size: 17px;
+    gap: 5px;
+  }
+  .startMenu,
+  .osMenu {
+    bottom: 45px;
+    max-height: calc(100% - 45px);
+  }
+  .tray {
+    gap: 5px;
+    padding: 2px 5px;
+  }
+  .tray button {
+    min-height: 34px;
+    min-width: 33px;
+  }
+  .tasks button {
+    flex: 0 0 30px;
+  }
+  .tasks span:last-child {
+    display: none;
+  }
+}

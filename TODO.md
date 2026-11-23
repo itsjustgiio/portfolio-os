@@ -99,46 +99,49 @@ A visitor can open the site, immediately recognize the Windows XP-inspired deskt
 
 See the [proposed first implementation tasks](docs/phase-1-first-slice.md).
 
+The first slice includes the XP app registry, first-visit Welcome, My Documents and Resume reading links, and an empty Recycle Bin. Alternate-OS app labels, approved case studies and direct contact details are pending. The public résumé PDF and GitHub/LinkedIn shortcuts are available. The production export passed Chrome desktop, keyboard, and emulated mobile tests. Real-device and assistive-technology testing, 200% zoom and visual regression remain open.
 ### 1A. Shared desktop model
-- [ ] Define `OperatingSystem = 'xp' | 'kali' | 'tiger'` and app IDs; validate IDs centrally.
+- [x] Define `OperatingSystem = 'xp' | 'kali' | 'tiger'` and app IDs; validate IDs centrally.
 - [ ] Define app registry with ID, name, icon, route, window defaults, mobile presentation, and OS-specific labels.
-- [ ] Define window state: instance ID, app ID, title, open/minimized/maximized, focused, bounds, z-index, and optional navigation context.
-- [ ] Implement pure window reducer/store: open, activate, minimize, restore, maximize, move, resize, close, switch OS.
-- [ ] Decide whether multiple windows of same app can open; test duplicates and restore behavior.
-- [ ] Clamp window bounds to usable viewport/taskbar; address resizing viewport while window is open.
-- [ ] Make restore position deterministic and prevent z-index growing unbounded across long sessions.
-- [ ] Ensure pointer events never interfere with internal controls/text selection.
-- [ ] Write unit tests for window state transitions and initial bounds.
+- [x] Define window state: instance ID, app ID, title, open/minimized/maximized, focused, bounds, z-index, and optional navigation context.
+- [x] Implement pure window reducer/store: open, activate, minimize, restore, maximize, move, resize, close, switch OS.
+- [x] Decide whether multiple windows of same app can open; test duplicates and restore behavior.
+- [x] Clamp window bounds to usable viewport/taskbar; address resizing viewport while window is open.
+- [x] Make restore position deterministic and prevent z-index growing unbounded across long sessions.
+- [x] Ensure pointer events never interfere with internal controls/text selection.
+- [x] Write unit tests for window state transitions and initial bounds.
 
 ### 1B. Desktop surface
-- [ ] Create XP desktop layout and classic blue taskbar in responsive CSS.
-- [ ] Implement custom or properly licensed Bliss-inspired wallpaper asset with documented provenance.
-- [ ] Use original/approved icons resembling My Computer, My Documents, My Network Places, Recycle Bin and portfolio apps.
-- [ ] Implement desktop icon focus, selected state, tooltip, activation by keyboard, mouse and touch.
-- [ ] Implement Start button/menu with opening, nested list navigation if needed, escape-to-close, and focus return.
-- [ ] Add running app buttons to taskbar with minimize/restore behavior.
-- [ ] Add clock using client-side local time without server hydration mismatch.
-- [ ] Implement title bar, icon, close/minimize/maximize controls, keyboard-accessible alternatives to dragging.
+- [x] Create XP desktop layout and classic blue taskbar in responsive CSS.
+- [x] Implement custom or properly licensed Bliss-inspired wallpaper asset with documented provenance.
+- [x] Use original/approved icons resembling My Computer, My Documents, My Network Places, Recycle Bin and portfolio apps.
+- [x] Implement desktop icon focus, selected state, tooltip, activation by keyboard, mouse and touch.
+- [x] Implement Start button/menu with opening, nested list navigation if needed, escape-to-close, and focus return.
+- [x] Add running app buttons to taskbar with minimize/restore behavior.
+- [x] Add clock using client-side local time without server hydration mismatch.
+- [x] Implement title bar, icon, close/minimize/maximize controls, keyboard-accessible alternatives to dragging.
 - [ ] Add context menu only if it serves a real purpose, accessible through keyboard as well.
-- [ ] Add small System/OS selector control but keep Kali/Tiger disabled or clearly labeled Coming Later until implemented.
+- [x] Add small System/OS selector control but keep Kali/Tiger disabled or clearly labeled Coming Later until implemented.
 - [ ] Use optional startup sequence with skip button; avoid forcing repeated waits.
 - [ ] Prefer user-initiated audio; initial mode muted and reduced-motion option honored.
 
 ### 1C. Apps and routes
-- [ ] Implement About Me window with verified, up-to-date copy.
-- [ ] Implement My Computer listing five portfolio areas as virtual drives/folders.
-- [ ] Implement My Documents showing case studies and downloadable files.
-- [ ] Implement My Network Places linking to a topology placeholder.
-- [ ] Implement résumé window and direct document open/download path.
-- [ ] Implement GitHub/LinkedIn shortcuts using approved public URLs; open external links safely with `noopener noreferrer` where appropriate.
-- [ ] Provide canonical HTML routes for About, Projects, Resume, and Contact (or equivalent static content) for search engines and sharing.
+- [x] Implement first-visit Welcome with the approved introduction and a direct About page.
+- [x] Implement My Computer listing five portfolio areas as virtual drives/folders.
+- [x] Provide an empty Recycle Bin.
+- [x] Build My Documents with Projects, Certifications, CTF Writeups and Photos folders, plus a read-only Notepad window for About Me.txt.
+- [ ] Add approved case studies, diagrams, verified credentials, competition reports, photos and downloadable files to My Documents.
+- [x] Implement My Network Places with five navigable simulated portfolio servers. The topology is implemented in Phase 2C.
+- [x] Implement résumé window and direct document open/download path.
+- [x] Implement GitHub/LinkedIn shortcuts using approved public URLs; open external links safely with `noopener noreferrer` where appropriate.
+- [x] Provide canonical HTML routes for About, Projects, Resume, and Contact (or equivalent static content) for search engines and sharing.
 - [ ] Add error/not-found states for invalid app ID, deleted project ID and missing assets.
 
 ### 1D. Browser and device checks
-- [ ] Test open/close/minimize/maximize/focus with mouse and keyboard.
-- [ ] Test two windows competing for focus; switch apps repeatedly and ensure taskbar consistency.
-- [ ] Test 1366×768, 1920×1080, and narrow mobile widths; verify windows stay accessible.
-- [ ] Confirm mobile uses app launcher or readable panels rather than tiny off-screen draggable windows.
+- [x] Test open/close/minimize/maximize/focus with mouse and keyboard.
+- [x] Test two windows competing for focus; switch apps repeatedly and ensure taskbar consistency.
+- [x] Test 1366×768, 1920×1080, and narrow mobile widths; verify windows stay accessible.
+- [x] Confirm mobile uses app launcher or readable panels rather than tiny off-screen draggable windows.
 - [ ] Check reduced motion, focus indicators, contrast, and readable 200%-zoom behavior.
 - [ ] Run screenshot-based visual tests for key XP states.
 
@@ -161,23 +164,27 @@ See the [proposed first implementation tasks](docs/phase-1-first-slice.md).
 ### 2B. Five main areas
 - [ ] **IT Infrastructure:** inventory services, host grouping, project purpose, stack, ownership, architecture, screenshots, troubleshooting lessons.
 - [ ] **Cybersecurity:** BSidesNYC 2026 (team second), BSides Delaware 2026 (team first, per user), TENEX/Microsoft (solo first among eligible), Google Defense Readiness (solo second), research and labs; distinguish event participation from verified awards.
-- [ ] **AI Projects:** World Merit RAG pipeline, FareFit, BridgeCoach, SereneScape, automotive diagnostic assistant *concept*; distinguish implemented features from proposals.
+- [x] **AI Projects:** Populate AI-LAB-SRV and the static AI portfolio with FareFit, World Merit RAG Pipeline, SereneScape, BridgeCoach and Automotive AI Diagnostics. Verify public repository evidence and distinguish implementation, prototype and concept.
+- [x] Verify AI-LAB-SRV folder navigation, read-only Notepad, public screenshot viewing and safe external shortcuts on desktop and emulated mobile.
+- [x] Add all six supplied World Merit internship writeups, a separate dated organization profile and the official website shortcut.
+- [x] Add the supplied BridgeCoach Team 7 slide and three Automotive AI Diagnostics concept diagrams to Picture Viewer.
+- [ ] Add the full BridgeCoach pitch deck if supplied and approved.
 - [ ] **Professional:** education, current work experience, certifications, awards, resume, public GitHub and LinkedIn; verify dates and employment statuses before publishing.
 - [ ] **Personal:** gym, car maintenance, hikes and friends, after reviewing photo consent, privacy and location metadata.
 - [ ] Use case-study template: overview → problem → goal → architecture → your contribution → what happened → troubleshooting → outcome/evidence → next steps.
 - [ ] Add reading-friendly alternatives to visually animated demos.
 
 ### 2C. Portfolio topology design
-- [ ] Clarify that the *portfolio graph* is conceptual, not a real LAN inventory.
-- [ ] Name six top-level nodes: `giovanni-core` plus IT, CYBER, AI, PROFESSIONAL, PERSONAL.
+- [x] Clarify that the *portfolio graph* is conceptual, not a real LAN inventory.
+- [x] Label the topology with Giovanni at the center and AI, IT, Cybersecurity, Professional and Personal as the five parts of his life. Show the purpose of each area on selection and in Server list. Keep technical names in Explorer paths.
 - [ ] Define typed `Node` (ID, label, description, status, link) and `Edge` (from/to, label) structures.
-- [ ] Create default visual layout with core central and five spaced nodes; no overlapping labels at targeted sizes.
-- [ ] Make node clicking open a detail panel/window; keyboard Enter and Space perform the same action.
-- [ ] Add accessible list view for visitors who can't use a graph.
+- [x] Create a wide layout with the core central and five spaced nodes, plus a stacked narrow layout. Verify labels and connections in desktop and mobile views.
+- [x] Select nodes on click or tap. Open the portfolio folder on double-click, Enter, Space or with the Open selected button.
+- [x] Add accessible list view for visitors who can't use a graph.
 - [ ] Provide zoom/pan and reset buttons only if needed; prevent unexpected scroll capture.
 - [ ] Make hover tooltips supplementary, never the only source of information.
 - [ ] Decide whether expanding second-level nodes is actually useful; implement incrementally after testing clarity.
-- [ ] Test that a direct project link works without navigating through the topology first.
+- [x] Test that a direct project link works without navigating through the topology first.
 
 ### 2D. Homelab case study (separate from public topology)
 - [ ] Make a private architecture inventory first: actual devices, hypervisors, networks, containers, ingress/egress, backups and dependencies.

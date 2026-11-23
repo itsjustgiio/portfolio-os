@@ -1,0 +1,217 @@
+.explorer {
+  background: #ece9dd;
+  color: #172238;
+  min-height: 100%;
+  container: network / inline-size;
+}
+.toolbar {
+  display: flex;
+  gap: 3px;
+  flex-wrap: wrap;
+  padding: 4px;
+  border-bottom: 1px solid #b6b2a1;
+}
+.toolbar button {
+  display: inline-flex;
+  gap: 4px;
+  align-items: center;
+  min-height: 29px;
+  padding: 3px 6px;
+  border: 1px solid transparent;
+  color: inherit;
+  background: transparent;
+  cursor: pointer;
+}
+.toolbar button:enabled:hover,
+.toolbar button[aria-pressed="true"] {
+  border-color: #9aafca;
+  background: #e1ebf9;
+}
+.toolbar button:disabled {
+  color: #666358;
+  cursor: default;
+}
+.address {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  min-height: 24px;
+  padding: 2px 6px;
+  background: #fff;
+  border-bottom: 1px solid #b6b2a1;
+}
+.address > span:first-child {
+  margin: -2px 0 -2px -6px;
+  padding: 4px 6px;
+  background: #ece9dd;
+  border-right: 1px solid #b6b2a1;
+}
+.graphFrame {
+  background: #f8f7f1;
+  padding: 7px 8px 1px;
+}
+.graphFrame h2 {
+  font-size: 15px;
+  margin: 0 0 3px;
+}
+.graphFrame p {
+  margin: 0;
+  font-size: 12px;
+}
+.graph {
+  position: relative;
+  height: 302px;
+  container-type: size;
+  --core-x: 50;
+  --core-y: 52;
+}
+.graph ul,
+.list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.core {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  flex-direction: column;
+  text-align: center;
+  padding: 4px 9px;
+  background: #dce8f5;
+  border: 1px solid #9ab4d5;
+  border-radius: 12px;
+}
+.graph .core {
+  position: absolute;
+  left: calc(var(--core-x) * 1%);
+  top: calc(var(--core-y) * 1%);
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+.core strong,
+.core span span,
+.nodeLabel span,
+.nodeLabel strong {
+  display: block;
+}
+.node {
+  --x: var(--wide-x);
+  --y: var(--wide-y);
+}
+.graph .node button {
+  position: absolute;
+  left: calc(var(--x) * 1%);
+  top: calc(var(--y) * 1%);
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+.connection {
+  --dx: calc((var(--x) - var(--core-x)) * 1cqw);
+  --dy: calc((var(--y) - var(--core-y)) * 1cqh);
+  position: absolute;
+  left: calc(var(--core-x) * 1%);
+  top: calc(var(--core-y) * 1%);
+  width: hypot(var(--dx), var(--dy));
+  height: 1px;
+  background: #171717;
+  transform: rotate(atan2(var(--dy), var(--dx)));
+  transform-origin: left center;
+  pointer-events: none;
+}
+.node button {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  background: #f8f7f1;
+  color: #172238;
+  font-size: 11px;
+  white-space: nowrap;
+  text-align: left;
+}
+.node button:hover {
+  border-color: #9aafca;
+}
+.node button[aria-pressed="true"] {
+  border-color: #5d82ba;
+  background: #dceafd;
+}
+.machine {
+  display: block;
+  flex: none;
+  object-fit: contain;
+  filter: drop-shadow(1px 2px 1px #15213143);
+}
+.status {
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  border: 1px solid #376426;
+  background: radial-gradient(circle at 35% 27%, #dcffa5, #5eab37 65%, #3a7224);
+}
+.statusbar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 8px;
+  border-top: 1px solid #c3beaa;
+  font-size: 11px;
+}
+.list {
+  margin: 9px 0;
+}
+.list .core {
+  flex-direction: row;
+  text-align: left;
+  border-radius: 2px;
+}
+.list .node button {
+  width: 100%;
+  min-height: 44px;
+  margin-top: 2px;
+  white-space: normal;
+}
+.list .nodeLabel {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px 8px;
+}
+
+@container network (max-width: 550px) {
+  .graph {
+    height: 343px;
+    --core-y: 14;
+  }
+  .node {
+    --x: var(--narrow-x);
+    --y: var(--narrow-y);
+  }
+  .graph .node button {
+    flex-direction: column;
+    gap: 1px;
+    text-align: center;
+    min-width: 108px;
+  }
+  .node .machine {
+    width: 32px;
+    height: 32px;
+  }
+  .core .machine {
+    width: 48px;
+    height: 48px;
+  }
+  .toolbar button {
+    min-height: 36px;
+  }
+}
+
+@container network (max-width: 286px) {
+  .node {
+    --x: clamp(25, var(--narrow-x), 75);
+  }
+}

@@ -1,0 +1,16 @@
+.page,
+.window {
+  display: block;
+  width: 100%;
+  border: 0;
+  background: white;
+}
+.page {
+  height: 82dvh;
+}
+.window {
+  height: 100%;
+}
+.fallback {
+  padding: 12px;
+}

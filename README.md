@@ -1,8 +1,8 @@
 # Giovanni OS
 
-Giovanni OS is a browser-based portfolio planned around an XP-inspired desktop and accessible reading pages. The Phase 0 scaffold provides a neutral homepage.
+Giovanni OS is a browser-based portfolio with a Luna-inspired XP desktop and accessible reading pages. The Phase 1 slice includes working application windows and five simulated portfolio servers.
 
-**Screenshot placeholder** — Add an approved desktop screenshot when the first shell is implemented.
+[Desktop](docs/screenshots/xp-desktop-1366x768.png) · [Start menu](docs/screenshots/xp-start-menu-1366x768.png) · [Mobile](docs/screenshots/xp-mobile-390x844.png)
 
 ## Setup and usage
 
@@ -23,9 +23,16 @@ npm run build
 npm test
 ```
 
-The build writes a static site to `out/`. The tests inspect its HTML and require a build first.
+The build writes a static site to `out/`. Tests cover the export and window manager. Browser tests exercise the static build using a temporary loopback server. With Google Chrome installed, run:
 
-The export contains public content only. Keep credentials and private source material outside the repository. See the security notes for review and hosting requirements.
+```powershell
+$env:DESKTOP_BROWSER = "chrome"
+npm.cmd run test:browser
+```
+
+To use Playwright Chromium, run `npm exec -- playwright install chromium` and leave `DESKTOP_BROWSER` unset. Set `DESKTOP_SCREENSHOTS=1` to regenerate the reference screenshots. Window titles accept arrow keys to move and Shift with arrow keys to resize. The taskbar Portfolio link opens the static reading pages.
+
+The meadow wallpaper in `public/artwork/green-meadow.webp` was created and supplied by Giovanni Carrion. The shell icons and Luna-inspired chrome are original CSS in `src/desktop`. The topology uses an original generated tower illustration in `public/artwork/topology-server-tower.webp`. The [Windows Icon Archive](https://limehawk.github.io/windows-icon-archive/) catalogs extracted system graphics and served as a visual reference. The export contains public content only. Keep credentials and private source material outside the repository.
 
 ## Project notes
 

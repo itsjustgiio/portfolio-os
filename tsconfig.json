@@ -20,7 +20,8 @@
     },
     "allowJs": true,
     "skipLibCheck": true,
-    "resolveJsonModule": true
+    "resolveJsonModule": true,
+    "allowImportingTsExtensions": true
   },
   "include": [
     "next-env.d.ts",
