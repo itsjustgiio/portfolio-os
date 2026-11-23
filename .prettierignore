@@ -1,0 +1,6 @@
+TODO.md
+.next/
+out/
+coverage/
+package-lock.json
+next-env.d.ts
